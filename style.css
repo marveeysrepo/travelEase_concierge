@@ -57,7 +57,7 @@ font-family:'Merienda';
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-#navLinks {
+.navLinks {
     list-style-type: none;
     display: none;
     flex-direction: column;
@@ -66,7 +66,7 @@ font-family:'Merienda';
     top: 70px;
     right: 0;
     width: 500px;
-    height: 50vh;
+    height: 100vh;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
    
@@ -77,19 +77,19 @@ font-family:'Merienda';
     color: #0d1b2a;
     font-weight: 600;
 }
-#navLinks li {
-    margin-left: 25px;
+.navLinks li {
+    margin-top: 25px;
 }
-#navLinks a {
+.navLinks a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
     transition: color .3s ease-in-out;
 }
-#navLinks a:hover {
+.navLinks a:hover {
     color: #e0a106;
 }
-.navLinks:active {
+.navLinks.active {
     display: flex;
 }
 /* nav toggle */
@@ -111,10 +111,236 @@ font-family:'Merienda';
 /* Hero section */
 .hero {
     height: 100vh;
-    /* add bg image */
+    background: url('assets/images/hero_laughing_hikers.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
+    object-fit: cover;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    text-indent: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.heroContents {
+    position: relative;
+    z-index: 1;
+    color: gold;
+}
+.hero h1 {
+    font-family: "PlayFair Display", serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-shadow: 4px 4px 4px #574444;
+    color: white;
+}
+.btn {
+background-color: #e0a106;
+color: white;
+padding: 12px 25px;
+border: none;
+border-radius: 10px;
+text-decoration: none;
+font-weight: 500;
+transition: background-color 0.3s ease-in-out;
+font-weight: 700;
+width: 250px;
+}
+.btn:hover {
+    background-color: #0d1b2a;
+}
+/* about section */
+section {
+    padding: 100px 60px;
+}
+#about p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+/* services section style */
+
+#about h2, #services h2, #testimonials h2, #destinations h2,  #experience h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.3rem;
+}
+h3 {
+    font-size: 1.3rem;
+}
+.serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+.card {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform .3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card i { width: 100%;
+    font-size: 3rem;
+    color: #e0a106;
+    margin-bottom: 15px;
+    transition: transform .3s ease-in-out;
+}
+.card i:hover {
+    transform: translateX(10px);
+}
+.card .fa-plane-departure:hover {
+        transform: translateX(-100px);
+}
+.card h3 {
+    margin-bottom: 15px;
+}
+/* destinations style */
+.destinationGrid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+}
+.destination {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+/* testimony */
+.testimonialGrid, .experienceGrid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.testimonial{
+    background-color: #f7f7f7;
+    padding: 25px;
+    border-radius: 10px;
+    font-style: italic;
+}
+.testimonial h4 {
+    margin: 20px auto;
+    font-weight: 700;
+}
+/* contact style */
+#contact h2 , p {
+    text-align: center;
+}
+#contact p {
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+}
+.contactForm {
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    gap: 15px;
+}
+label {
+    font-weight: 900;
+}
+form input, form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+form span {
+    color: red;
+}
+form button {
+    align-self:center;
+}
+
+/* newsletter */
+.newsletter {
+    background-color: #0d1b2a;
+    padding: 30px;
+    height: 250px;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px 0 10px 0;
+    color: #e0a106;
+}
+.footForm {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 10px 0;
+}
+.footForm button {
+   
+    padding: 15px 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 300px;
+}
+.footForm input  {
+    padding: 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+/* footer */
+footer {
+    padding: 20px ;
+    background: rgba(225, 225, 225, 0.95);
+
+}
+footer div ul  {
+margin-top: 2rem;}
+footer div ul li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+footer div ul li a {
+    text-decoration: none;
     color: #111;
+    transition: text-decoration .3s ease-in-out, color
+    .3s ease-in-out;
+}
+footer div ul li a:hover {
+    color: #e0a106;
+    text-decoration: underline;
+}
+.footflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap; 
+    margin-bottom: 2rem;
 }
