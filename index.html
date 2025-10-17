@@ -1,34 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>g
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Marveey Goodlife">
-    <meta name="description" content="This is a travel concierge website, that handles booking, traveling, itineries and flight to differnt countries">
+    <meta name="description" content="Easytravel is a global travel concierge agency, that handles booking, traveling, private tours and flight to  countries across the globe">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io (3)/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io (3)/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io (3)/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon_io (3)/site.webmanifest"> 
     <link rel="stylesheet"  href="style.css">
-    <title>EastTravel Concierge</title>
+    <title>EasyTravel Tours | Flights | Hotels and Holidays</title>
 </head>    
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="">Home</a> </li>
-            <li><a href="">About</a> </li>
-            <li><a href="">Services</a> </li>
-            <li><a href="">Contact</a> </li>
+<header id='home'>
+    <nav id="navBar">
+        <ul id="navLinks">
+            <li><a href="#about">About</a> </li>
+            <li><a href="#services">Services</a> </li>
+            <li><a href="#destinations">Destination</a> </li>
+            <li><a href="#contact">Contact</a> </li>
         </ul>
+	<button type="button" aria-label="Navigation menu button" aria-expanded="false" id="navMenuBtn"> 
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</button>
     </nav>
+    <div class="hero">
+	    <div class="heroContents">
+		    <h1> Luxury Travels. Redifined</h1>
+		    <p>Your world, thoughtfully organized by easyTravel Tours</p>
+		    <a href="#contact" class="heroBtn"> Start Your Trip</a>
+	    </div>
+    </div>
 </header>
 <main>
-<section></section>
-<section></section>
-<section></section>
-<section></section>
-<section></section>
-<section></section>
+    <!-- about me section -->
+<section id="about">
+    <div class="aboutContainer">
+        <h2>About Easy Travel</h2>
+        <p>
+            At <b>easytravel</b>,  we arrange bespoke travel experiences that merge luxury, comfort and culture. Whether you want a private island retreat, a mountain escape, or a romantic city getaway - our concierge service ensures every moment is enjoyable and unforgettable. 
+        </p>
+    </div>
+</section>
+<!-- services section -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="serviceGrid">
+        <div class="card">
+            <i class="fas fa-plane-departure"></i>
+            <h3> Flight & Hotel Bookings</h3>
+            <p>We handle your itenery details, from first-class flights to five star accomodations.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Private tours </h3>
+            <p>Experience destinations through our local guides and private experiences.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-passport"></i>
+            <h3>Visa Assistance</h3>
+            <p>Travel made easy. We simplify documentations and embassy processes for you.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-car"></i>
+            <h3>Vip Transfers</h3>
+            <p>From airport to resort, enjoy luxury car transfers and easy check-ins.</p>
+        </div>
+    </div>
+</section>
+<!-- destination -->
+<section id="destinations">
+    <h2>Explore Destinations</h2>
+    <p>Top rated destination curated for you.</p>
+    <div class="destinationGrid">
+        <div class="destination">
+            <!-- add background image -->
+             <div class="overlay">Japan</div>
+        </div>
+        <div class="destination">
+            <!-- add background image -->
+             <div class="overlay">China</div>
+        </div>
+        <div class="destination">
+            <!-- add background image -->
+             <div class="overlay">Cancun, Mexico</div>
+        </div>
+        <div class="destination">
+            <!-- add background image -->
+             <div class="overlay">Maldives</div>
+        </div>
+        <div class="destination">
+            <!-- add background image -->
+             <div class="overlay">Zanzibar</div>
+        </div>
+        <div class="destination">
+            <!-- add background image -->
+             <div class="overlay">Austria</div>
+        </div>
+    </div>
+</section>
+<!-- client testimony -->
+<section id="testimonial">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonialGrid">
+        <div class="testimonial">
+            <p>EasyTravel made Our honeymoon enjoyable. They handled every details with precision.</p>
+            <h4>Emma & Amara</h4>
+        </div>
+        <div class="testimonial">
+            <p>
+                They legalized my documents on my behalf, I didn't have to travel to & fro.
+            </p>
+            <h4>Godstime Ekpeyong</h4>
+        </div>
+        <div class="testimonial">
+            <p>
+                From luxury transfers to last minute changes, they took care of everything. I din't have to stress myself.
+            </p>
+            <h4>John Bosco and family</h4>
+        </div>
+        <div class="testimonial">
+            <p>
+                Their services is top notch. I highly recommend easyTravel.
+            </p>
+            <h4>Fatimah Danjumah</h4>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>How are we different?</h2>
+    <div class="experienceGrid">
+        <div class="card">
+            <img src="" alt="Best travel deals">
+            <h3>Best travel deals</h3>
+            <p>We bring you the most recent deals.</p>
+        </div>
+        <div class="card">
+            <img src="" alt="Best travel deals">
+            <h3>Transparency</h3>
+            <p>We offer competitive pricing with no  hidden fees.</p>
+        </div>
+        <div class="card">
+            <img src="" alt="Best travel deals">
+            <h3>StandBy Support</h3>
+            <p>Our support are active to answer your questions 24/7.</p>
+        </div>
+        <div class="card">
+            <img src="" alt="Best travel deals">
+            <h3>Stress free</h3>
+            <p>We handle the hassle for you if you're busy.</p>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Whether you want to book a flight, have us recommend your next vacation, or comment on our services.</p>
+    <p>Feel free to leave us a message below.</p>
+
+    <form action="" method="post" class="contactForm">
+<label for="fullname">Full Name : <span>*</span></label>
+<input type="text" name="fullname" id="fullname" required autocomplete="on" placeholder="Enter your full name" required>
+
+<label for="email">Email : <span>*</span></label>
+<input type="email" name="email" id="email" placeholder="example@email.com" autocomplete="email" required>
+<!-- add radio buttons to know how user head about easy travel -->
+ <!-- add checkbox for user to rate easy travel services -->
+<label for="message">Message : <span>*</span></label>
+<textarea name="message" id="message" cols="30" rows="5" placeholder="Send us a message"></textarea>
+<button type="submit">Submit</button>
+    </form>
+</section>
 </main>
 <footer>
-
+    <div class="newsletter">
+        <p class="news">Sign up for our newsletter to receive the best deals and offers in your Inbox.</p>
+        <div class="footForm">
+            <input type="email" placeholder="Enter your email"> 
+            <button type="submit" id="newsBtn">SIGN-UP <i class="fas fa-arrow"></i></button>
+        </div>
+    </div>
+    <div class="footerNav">
+        <ul>
+            <li><a href="">Easy Travel</a></li>
+            <li><a href="">Popular Destinations</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Bookings</a></li>
+        </ul>
+    </div>
+    <div class="socialLinks">
+<ul>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">WhatsApp</a></li>
+</ul>    
+</div>
+	<p>&copy; 2025 EasyTravel Tours. <a href="">Privacy Policy.</a> <a href="">Cookie Policy.</a> </p>
 </footer>
+
+
+<!-- scripts -->
+ <script src="script.js"></script>
+ <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
-# 🌍 GlobeEase Concierge
+# 🌍 EasyTravel Concierge
 
-*GlobeEase Concierge* is a one-page static website for a luxury travel concierge brand.  
-It highlights premium travel planning services — from curated trips and private tours to VIP transfers and visa support — all within a smooth, elegant, mobile-friendly design.
+*EasyTravel Concierge* is a one-page static website for a luxury travel tour brand.  
+It highlights premium travel planning services — from planned trips and private tours to VIP transfers and visa support — all within a smooth, elegant, mobile-friendly design.
 
 ---
 
@@ -45,17 +45,17 @@ This project was built as a responsive, client-ready landing page using only cor
 
 1. Clone the repository  
 
-   ```bash
+  ```bash
    git clone https://github.com/marveeysrepo/globeEase-concierge.git
-```
+  ```
 
 ## License
 
  This project is open-source under the MIT License — feel free to adapt or modify it for personal or educational use.
 
-## 👨‍💻 Author 
+## 👨‍💻 Author
 
 Marvellous — Front-End Developer
 💼 Passionate about developing clean, modern, responsive web experiences.
-📧 marvellousediagbonya@gmail.com
+📧 <marvellousediagbonya@gmail.com>
 🌐  Portfolio or LinkedIn link
