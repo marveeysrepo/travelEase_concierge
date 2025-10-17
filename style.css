@@ -3,3 +3,118 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* fonts */
+@font-face {
+    font-family: 'Merienda';
+    src: url('/assets/fonts/Merienda-Regular.ttf'), format(truetype);
+    font-display: swap;
+    font-weight: bold;
+ }
+@font-face {
+    font-family: 'PlayFair Display';
+    src: url('/assets/fonts/PlayfairDisplay-Regular.ttf'), format(truetype);
+    font-display: swap;
+
+ 
+ }
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.ttf'), format(truetype);
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family : 'Merriweather';
+    src: url('assets/fonts/Merriweather_36pt-Regular.ttf'), format(truetype);
+}
+/* general body style */
+html {scroll-behavior: smooth;}
+
+body {
+    font-family: 'Poppins', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color:#fff;
+}
+/* heading style */
+h1, h2, h3 {
+    font-family:'PlayFair Display', 'Merriweather';
+}
+ h4 {
+font-family:'Merienda';
+}
+/* navigation */
+#navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(225, 225, 225, 0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+#navLinks {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    top: 70px;
+    right: 0;
+    width: 500px;
+    height: 50vh;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   
+}
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #0d1b2a;
+    font-weight: 600;
+}
+#navLinks li {
+    margin-left: 25px;
+}
+#navLinks a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color .3s ease-in-out;
+}
+#navLinks a:hover {
+    color: #e0a106;
+}
+.navLinks:active {
+    display: flex;
+}
+/* nav toggle */
+#navMenuBtn {
+    cursor: pointer;
+    margin: 1rem;
+    width: fit-content;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    border: transparent;
+}
+.bar {
+    height: 3px;
+    width: 20px;
+    background-color: black;
+    margin: .2rem;
+}
+/* Hero section */
+.hero {
+    height: 100vh;
+    /* add bg image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #111;
+}
