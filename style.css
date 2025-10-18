@@ -30,7 +30,28 @@
 }
 /* general body style */
 html {scroll-behavior: smooth;}
-
+i {
+    font-size: 1.2rem;
+ color: #0d1b2a;
+}
+.skiplink {
+background: #111;
+color: white;
+ padding: 12px 15px;
+z-index: 0;
+position: absolute;
+top: -1000;
+left: 0;
+transition: top .3s ease-in-out;
+cursor: pointer;
+opacity: 0;
+}
+.skiplink:focus {
+    opacity: 1;
+    z-index: 10000;
+   top: 0;
+    border: 2px solid #e0a106;
+}
 body {
     font-family: 'Poppins', serif;
     line-height: 1.6;
@@ -63,6 +84,8 @@ font-family:'Merienda';
     flex-direction: column;
     position: absolute;
     background-color: #fff;
+    align-items: center;
+    justify-content: enter;
     top: 70px;
     right: 0;
     width: 500px;
@@ -78,6 +101,8 @@ font-family:'Merienda';
     font-weight: 600;
 }
 .navLinks li {
+    text-align: center;
+    margin: 10px;
     margin-top: 25px;
 }
 .navLinks a {
@@ -161,7 +186,7 @@ width: 250px;
 }
 /* about section */
 section {
-    padding: 100px 60px;
+    padding: 100px 30px;
 }
 #about p {
     max-width: 800px;
@@ -175,7 +200,7 @@ section {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.3rem;
-}
+} 
 h3 {
     font-size: 1.3rem;
 }
@@ -235,22 +260,28 @@ gap: 25px;
 }
 
 /* testimony */
-.testimonialGrid, .experienceGrid{
+.testimonialGrid, .experienceGrid {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
 }
-.testimonial{
+.testimonial {
     background-color: #f7f7f7;
     padding: 25px;
     border-radius: 10px;
     font-style: italic;
 }
 .testimonial h4 {
+    text-align: center;
     margin: 20px auto;
     font-weight: 700;
 }
 /* contact style */
+#contact {
+    background-color: #0d1b2ad2;
+    color: white;
+}
 #contact h2 , p {
     text-align: center;
 }
@@ -268,7 +299,7 @@ gap: 25px;
 form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 400px;
     margin: auto;
     gap: 15px;
 }
@@ -289,31 +320,30 @@ form button {
 /* newsletter */
 .newsletter {
     background-color: #0d1b2a;
-    padding: 30px;
-    height: 250px;
-    width: 90%;
+    padding: 5px;
+    height: 200px;
+    width: 100%;
     margin: 10px auto;
     border-radius: 10px 0 10px 0;
+    display: grid;
+    place-items: center;
     color: #e0a106;
 }
-.footForm {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    align-items: center;
-    padding: 10px 0;
+.news {
+    font-size: .9rem;
+    padding: 0 3px;
+    line-height: 1.4;
 }
 .footForm button {
-   
-    padding: 15px 25px;
-    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border: none;
+    cursor:pointer;
     text-align: center;
-    width: 300px;
+    width: fit-content;
 }
 .footForm input  {
-    padding: 12px;
-    border: 1px solid #ccc;
-    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0a106;
 }
 /* footer */
 footer {
@@ -338,9 +368,64 @@ footer div ul li a:hover {
     text-decoration: underline;
 }
 .footflex {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row wrap; 
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-bottom: 2rem;
+}
+.footh4 {
+    padding: 0;
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+#navMenuBtn {
+    display: none;
+}
+.navLinks {
+     display: flex;
+    flex-direction: row;
+    position: unset;
+    background-color: unset;
+    top: unset;
+    right: unset;
+    width: unset;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   
+}
+.navLinks li {
+    margin-top: unset;
+    margin-right: 1rem;
+}
+.navLinks a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color .3s ease-in-out;
+}
+.footForm {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+        max-width: 600px;
+
+}
+.news {
+    font-size: 1rem;
+    padding:unset;
+    line-height: unset;
+    margin: 0;
+}
+.footForm button {
+    padding: 10px 20px;
+    min-width: 250px;
+    margin: 0;
+}
+.footForm input  {
+    padding: 10px;
+    border: 1px solid #e0a106;
+       min-width: 300px;
+margin: 0;
+}
 }

@@ -3,18 +3,17 @@ const menuBtn = document.querySelector("#navMenuBtn");
 const navUl = document.querySelector("#navLinks");
 const navLinks = document.querySelectorAll("#navLinks a");
 
-function dynamicToggle() {
+/* function dynamicToggle() {
 
-    menuBtn.addEventListener("click", (e) => {
+/*     menuBtn.addEventListener("click", (e) => {
         e.stopPropagation();
     const ariaExpanded = menuBtn.getAttribute('Aria-expanded') === 'true';
     menuBtn.setAttribute('Aria-expanded', !ariaExpanded);
-        console.log(ariaExpanded)
-            navUl.classList.toggle("active");
+             navUl.classList.toggle("active");
 
-})
+}) */
 
-navLinks.forEach((link) => {
+/* navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
         if (e.target.matches('a')) {
             e.preventDefault();
@@ -27,11 +26,12 @@ navLinks.forEach((link) => {
             }, 100)
         };
     });
-}); 
-}
-dynamicToggle();
+});  */
+
+}; dynamicToggle();
 
 function closeMenu() {
     navUl.classList.remove("active");
     menuBtn.setAttribute("aria-expanded", false);
 }
+ */
