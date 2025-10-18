@@ -3,7 +3,7 @@
 const menuBtn = document.querySelector("#navMenuBtn");
 const ul = document.querySelector("#navLinks");
 const navLinks = document.querySelectorAll("#navLinks a");
-
+const scrollBtn = document.querySelector("#scrollBtn");
 function toggleLogic() {
     // add event to menuBtn
     // get aria expanded and toggle its value
@@ -31,16 +31,30 @@ function toggleLogic() {
                 setTimeout(() => {
                     document.querySelector(targetId).scrollIntoView({ behaviour: "smooth", });
                 }, 100);
-         }
-     })
- })
-
+            };
+        });
+    });
+  
+    
 };
 
 toggleLogic();
 
-
 function closeNav() {
     ul.classList.remove("active");
     menuBtn.setAttribute("aria-expanded", "false");
-}
+};
+
+/* scroll to top button logic */
+
+window.addEventListener("scroll", () => {
+    const scrollPosition = scrollY;
+    if (scrollPosition > 1500) {
+        scrollBtn.classList.add("show")
+    } else {
+        scrollBtn.classList.remove("show");
+    };
+})
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth", }); 
+});
