@@ -15,18 +15,18 @@
     font-family: 'PlayFair Display';
     src: url('/assets/fonts/PlayfairDisplay-Regular.ttf'), format(truetype);
     font-display: swap;
-
- 
  }
 @font-face {
     font-family: 'Poppins';
     src: url('assets/fonts/Poppins-Regular.ttf'), format(truetype);
     font-style: normal;
     font-weight: 600;
+    font-display: swap;
 }
 @font-face {
     font-family : 'Merriweather';
     src: url('assets/fonts/Merriweather_36pt-Regular.ttf'), format(truetype);
+    font-display: swap;
 }
 /* general body style */
 html {scroll-behavior: smooth;}
@@ -77,6 +77,7 @@ font-family:'Merienda';
     background: rgba(225, 225, 225, 0.95);
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #fff;
 }
 .navLinks {
     list-style-type: none;
@@ -86,7 +87,7 @@ font-family:'Merienda';
     background-color: #fff;
     align-items: center;
     justify-content: enter;
-    top: 70px;
+    top: 100px;
     right: 0;
     width: 500px;
     height: 100vh;
@@ -239,26 +240,77 @@ h3 {
 .destinationGrid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 25px;
+gap: 1.5rem;
 }
-.destination {
+.destinationCard {
+    overflow: hidden;
     height: 300px;
-    background-size: cover;
-    background-position: center;
+    cursor: pointer;
     border-radius: 10px;
     position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform .3s ease-in-out;
 }
-.overlay {
+.destinationCard:hover {
+    transform: scale(1.03);
+}
+.destinationCard img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
     position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    border-radius: 0 0 10px 10px;
-    text-align: center;
+    z-index: 0;
+    inset:0;
 }
 
+.destinationCard .destContent {
+     position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    background:linear-gradient(to top, rgba(0,0,0,0.6), transparent) ;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: transform .7s ease-out, opacity 0.7s ease-out;
+}
+.destinationCard.visible {
+    opacity: 1;
+     transform: translateY(0);
+}
+.destinationCard.visible .destContent {
+    transform: translateY(0);
+    opacity: 1;
+}
+.destContent h2 {
+        text-align: center;
+}
+ .destp {
+    margin-bottom: 1rem;
+ }
+#destinations {
+    background: url('assets/images/plane_wings.webp') center/cover no-repeat;
+    color: white;
+    position: relative;
+    z-index: 0;
+}
+#destinations::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.05);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+#destinations > * {
+    position:  relative;
+    z-index:1;
+}
 /* testimony */
 .testimonialGrid, .experienceGrid {
     display: grid;
@@ -372,7 +424,7 @@ footer div ul li a:hover {
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-bottom: 2rem;
 }
-.footh4 {
+.footh3 {
     padding: 0;
     margin: 1rem 0;
 }
@@ -461,3 +513,14 @@ margin: 0;
 outline: 1px solid #e0a106;
 box-shadow:  2px 2px 2px 2px rgba(0,0,0,0.5);
 } 
+i {
+        font-display: swap;
+}
+
+img.expImg {
+max-width:100%;
+height: auto;
+display:block;
+box-shadow: 0 3px 4px 4px rgba(0,0,0,0.05);
+border-radius: 6px;
+}

@@ -10,8 +10,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io (3)/favicon-16x16.png">
 <link rel="manifest" href="assets/favicon_io (3)/site.webmanifest"> 
     <link rel="stylesheet"  href="style.css">
-    <link rel="stylesheet" href="all.min.css">
-    <title>EasyTravel Tours | Flights | Hotels and Holidays</title>
+<!--     <link rel="stylesheet" href="all.min.css" defer>
+ -->    <title>EasyTravel Tours | Flights | Hotels and Holidays</title>
 </head>    
 <body>
     <a href="#mainContent" class="skiplink">Skip to main content</a>
@@ -77,32 +77,78 @@
 <!-- destination -->
 <section id="destinations">
     <h2>Explore Destinations</h2>
-    <p>Top rated destination curated for you.</p>
+    <p class="destp">Top rated destination curated for you.</p>
     <div class="destinationGrid">
-        <div class="destination">
-            <!-- add background image -->
-             <div class="overlay">Japan</div>
+        <!-- update alt attributes and paragraphs -->
+        <!-- destination 1 -->
+        <article class="destinationCard">
+<img src="assets/images/austria.webp" alt="Arial view of japan city with mountain landscape behind">             
+<div class="destContent">
+    <h1>Austria</h1>
+    <p>Lorem, ipsum dolor.</p>
+</div>
+        </article>
+        <!-- destinationCard 2 -->
+        <article class="destinationCard">
+<img src="assets/images/cancun.webp" alt="Arial view of cancun island waters and white sandy beaches">             
+<div class="destContent">
+    <h1>Cancun Mexico</h1>
+    <p>Lorem, ipsum dolor.</p>
+</div>
+        </article>
+        <!-- destinationCard 3 -->
+        <article class="destinationCard">
+<img src="assets/images/china.webp" alt="Arial view of the great walls of china">             
+<div class="destContent">
+    <h1>China</h1>
+    <p>Lorem, ipsum dolor.</p>
+</div>
+        </article>
+        <!-- destinationCard 4 -->
+        <article class="destinationCard">
+<img src="assets/images/japan.webp" alt="Arial view of japan city with mountain landscape behind">             
+<div class="destContent">
+    <h1>Japan</h1>
+    <p>Lorem, ipsum dolor.</p>
+</div>
+        </article>
+        <!-- destinationCard 5 -->
+        <article class="destinationCard">
+<img src="assets/images/maldivess.webp" alt="Arial view of japan city with mountain landscape behind">             
+<div class="destContent">
+    <h1>Maldives</h1>
+    <p>Lorem, ipsum dolor.</p>
+</div>
+        </article>
+        <!-- destinationCard 6 -->
+        <article class="destinationCard">
+<img src="assets/images/zanzibar.webp" alt="Arial view of japan city with mountain landscape behind">             
+<div class="destContent">
+    <h1>Zanzibar</h1>
+    <p>Lorem, ipsum dolor.</p>
+</div>
+        </article>
+        
+        <!-- <div class=" destination desttwo">
+           
+             <div class="overlay"><p>China</p></div>
+        </div> 
+        <div class="destination destthree">
+            
+             <div class="overlay"><p>Cancun, Mexico</p></div>
         </div>
-        <div class="destination">
-            <!-- add background image -->
-             <div class="overlay">China</div>
+        <div class="destination destfour">
+          
+             <div class="overlay"><p>Maldives</p></div>
         </div>
-        <div class="destination">
-            <!-- add background image -->
-             <div class="overlay">Cancun, Mexico</div>
+        <div class="destination destfive">
+           
+             <div class="overlay"><p>Zanzibar</p></div>
         </div>
-        <div class="destination">
-            <!-- add background image -->
-             <div class="overlay">Maldives</div>
-        </div>
-        <div class="destination">
-            <!-- add background image -->
-             <div class="overlay">Zanzibar</div>
-        </div>
-        <div class="destination">
-            <!-- add background image -->
-             <div class="overlay">Austria</div>
-        </div>
+        <div class="destination destsix">
+            
+             <div class="overlay"><p>Austria</p></div>
+        </div>-->
     </div>
 </section>
 <!-- client testimony -->
@@ -138,22 +184,22 @@
     <h2>How are we different?</h2>
     <div class="experienceGrid">
         <div class="card">
-            <img src="" alt="Best travel deals">
+            <img src="assets/images/bestoffer.png" alt="Best travel deals"  class="expImg">
             <h3>Best travel deals</h3>
             <p>We bring you the most recent deals.</p>
         </div>
-        <div class="card">
-            <img src="" alt="Best travel deals">
+        <div class="card Transparency">
+            <img src="assets/images/woman-looking-through-magnifying-glass.jpg" alt="Best travel deals" class="expImg">
             <h3>Transparency</h3>
             <p>We offer competitive pricing with no  hidden fees.</p>
         </div>
         <div class="card">
-            <img src="" alt="Best travel deals">
+            <img src="assets/images/shot-black-female-sitting-desk-giving-thumbs-up.jpg" alt="Best travel deals" class="expImg">
             <h3>StandBy Support</h3>
             <p>Our support are active to answer your questions 24/7.</p>
         </div>
         <div class="card">
-            <img src="" alt="Best travel deals">
+            <img src="assets/images/medium-shot-female-economist-working-office.jpg" alt="Best travel deals" class="expImg">
             <h3>Stress free</h3>
             <p>We handle the hassle for you if you're busy.</p>
         </div>
@@ -164,9 +210,9 @@
     <p>Whether you want to book a flight, have us recommend your next vacation, or comment on our services.</p>
     <p>Feel free to leave us a message below.</p>
 
-    <form action="" method="post" class="contactForm">
+    <form action="" method="post" class="contactForm" id="Form">
 <label for="fullname">Full Name : <span>*</span></label>
-<input type="text" name="fullname" id="fullname" required autocomplete="on" placeholder="Enter your full name" required>
+<input type="text" name="fullname" id="fullname" required autocomplete="on" placeholder="Enter your full name" required maxlength="25" size="20">
 
 <label for="email">Email : <span>*</span></label>
 <input type="email" name="email" id="email" placeholder="example@email.com" autocomplete="email" required>
@@ -174,11 +220,11 @@
  <!-- add checkbox for user to rate easy travel services -->
 <label for="message">Message : <span>*</span></label>
 <textarea name="message" id="message" cols="30" rows="3" placeholder="Send us a message"></textarea>
-<button type="submit" class="btn">Submit</button>
+<button type="submit" class="btn" id='submitBtn'>Submit</button>
     </form>
 </section>
 </main>
-<footer>
+ <footer>
     <div class="newsletter">
         <p class="news">Sign up for our newsletter to receive the best deals and offers in your Inbox.</p>
         <form action="" class="footForm" method="post">
@@ -188,7 +234,7 @@
     </div>
     <div class="footflex">
     <div class="footerNav">
-        <h4  class="footh4">Get to know us</h4>
+        <h3  class="footh3">Get to know us</h3>
         <ul>
             <li><a href="">Easy Travel</a></li>
             <li><a href="">Popular Destinations</a></li>
@@ -197,7 +243,7 @@
         </ul>
     </div>
     <div class="socialLinks">
-        <h4  class="footh4">Follow us on social media: </h4>
+        <h3  class="footh3">Follow us on social media: </h3>
 <ul>
     <li><a href="#"> <i class="fa-brands fa-instagram"></i> Instagram</a></li>
     <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
@@ -211,7 +257,8 @@
 
 <button type="button" id="scrollBtn" class="scrollBtn">^</button>
 <!-- scripts -->
- <script src="new.js"></script>
+ <script src="script.js"></script>
+ <script src="form.js"></script>
 
  <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
 </body>
