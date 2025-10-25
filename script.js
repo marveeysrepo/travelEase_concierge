@@ -3,10 +3,10 @@ const uL = document.querySelector("#navLinks");
 const navMenuBtn = document.querySelector("#navMenuBtn");
 const navLinks = document.querySelectorAll("nav a");
 const destinationCards = document.querySelectorAll(".destinationCard");
- 
+ const card = document.querySelectorAll(".card")
 const scrollBtn = document.querySelector("#scrollBtn");
 const mysection = document.querySelectorAll(".mysection");
-console.log(mysection)
+console.log(card)
 dynamicToggle();
 
 function closenav() {
@@ -79,7 +79,7 @@ const observer = new IntersectionObserver((entries) => {
         };
     });
 }, { threshold: 0.15 });
-[...destinationCards, ...mysection].forEach((element)=>{observer.observe(element)})
+[...destinationCards, ...mysection, ...card].forEach((element)=>{observer.observe(element)})
 
 
 

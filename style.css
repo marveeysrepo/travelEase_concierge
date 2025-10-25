@@ -271,8 +271,8 @@ gap: 1.5rem;
     border-radius: 10px;
     position: relative;
     opacity: 0;
-    transform: translateY(35px);
-    transition: opacity .6s ease-out, transform .6s ease-out;
+    transform: translateY(30px);
+    transition: opacity .3s ease-out, transform .3s ease-out;
 }
 .destinationCard:hover {
     transform: scale(1.03);
