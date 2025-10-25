@@ -22,7 +22,8 @@ This project was built as a responsive, client-ready landing page using only cor
 - 💼 Four-column service grid  
 - 📸 Featured destinations gallery  
 - 💬 Client testimonials  
-- 📩 Functional contact form (front-end only)  
+- 📩 Functional contact form (front-end only)
+- 🧭 Display contents when user scroll
 - 📱 Fully responsive layout  
 - ⚡ Optimized for GitHub Pages deployment  
 
@@ -35,6 +36,7 @@ This project was built as a responsive, client-ready landing page using only cor
 | *HTML5* | Markup structure |
 | *CSS3 (Flexbox & Grid)* | Layout and styling |
 | *JavaScript (Vanilla)* | Interactivity and smooth scrolling |
+| *dynamic contents* | IntersectionObserver Api |
 | *Google Fonts* | Typography |
 | *Font Awesome* | Icons |
 | *AOS (optional)* | Subtle scroll animations |
