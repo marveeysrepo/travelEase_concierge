@@ -3,7 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+:root {
+    --accent :  #205996;
+    --accent-hover :#132538;
+    --bg-color: #ffffff;
+    --bgc: #fff;
+    --cardbg :#fff;
+    --gold-accent:#e0a106;
+    --minshadow:rgba(0,0,0,0.5);
+    --shadow: 0 2px 5px rgba(0,0,0,0.05);
+    --text: #111;
+    --whitetext: #ffffff;
+}
 /* fonts */
 @font-face {
     font-family: 'Merienda';
@@ -32,7 +43,7 @@
 html {scroll-behavior: smooth;}
 i {
     font-size: 1.2rem;
- color: #0d1b2a;
+ color: var(--accent-hover);
 }
 .skiplink {
 background: #111;
@@ -48,15 +59,16 @@ opacity: 0;
 }
 .skiplink:focus {
     opacity: 1;
-    z-index: 10000;
+    z-index: 200;
    top: 0;
-    border: 2px solid #e0a106;
+    border: 2px solid var(--gold-accent);
 }
+ 
 body {
     font-family: 'Poppins', serif;
     line-height: 1.6;
-    color: #333;
-    background-color:#fff;
+    color: var(--text);
+    background-color:var(--bg-color);
 }
 /* heading style */
 h1, h2, h3 {
@@ -70,50 +82,61 @@ font-family:'Merienda';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 5px;
     position: fixed;
     width: 100%;
     top: 0;
     background: rgba(225, 225, 225, 0.95);
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border-bottom: 1px solid #fff;
+    z-index: 10;
+    box-shadow: var(--shadow);
+    border-bottom: 1px solid var(--bg-color);
 }
 .navLinks {
     list-style-type: none;
     display: none;
     flex-direction: column;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--bgc);
     align-items: center;
-    justify-content: enter;
-    top: 100px;
+     top: 70px;
     right: 0;
-    width: 500px;
+    width: 100%;
     height: 100vh;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-   
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1) inset;
+   z-index: 0;
 }
+
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: #0d1b2a;
+    font-size: clamp(20px, 5vw, 40px);
+    color: var(--accent-hover) ;
     font-weight: 600;
-}
+    align-self:center;
+ }
 .navLinks li {
-    text-align: center;
-    margin: 10px;
-    margin-top: 25px;
-}
-.navLinks a {
+     margin:20px 0;
+    position: relative;
+    top: 3rem;
+  }
+.navLinks > li:last-child {
+      margin:unset;
+   }
+.navLinks a, .privacy {
     text-decoration: none;
-    color: #333;
+    color: var(--text);
     font-weight: 500;
+    font-size: 1.2rem;
     transition: color .3s ease-in-out;
 }
-.navLinks a:hover {
-    color: #e0a106;
+.privacy {
+    font-size: initial;
+}
+.privacy:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+.navLinks a:hover{
+    color: var(--accent);
 }
 .navLinks.active {
     display: flex;
@@ -142,7 +165,7 @@ font-family:'Merienda';
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--whitetext);
     object-fit: cover;
 }
 .hero::after {
@@ -157,23 +180,23 @@ font-family:'Merienda';
 .heroContents {
     position: relative;
     z-index: 1;
-    color: gold;
-}
+ }
 .hero h1 {
     font-family: "PlayFair Display", serif;
     font-size: 3rem;
     margin-bottom: 10px;
 }
 .hero p {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-size: 1.2rem;
     text-shadow: 4px 4px 4px #574444;
-    color: white;
+    color: var(--whitetext);
 }
+ 
 .btn {
-background-color: #e0a106;
-color: white;
-padding: 12px 25px;
+background-color: var(--accent);
+color: var(---whitetext);
+padding: 10px 25px;
 border: none;
 border-radius: 10px;
 text-decoration: none;
@@ -183,29 +206,28 @@ font-weight: 700;
 width: 250px;
 }
 .btn:hover {
-    background-color: #0d1b2a;
+    background: var(--accent-hover);
+    color: var(--whitetext);
 }
 /* main section animations */
 .mysection{ 
     opacity: 0;
-    transition: opacity .9s ease-out, transform .9s ease-out;
-    transform: translateY(20px);
+    transition: opacity .6s ease-out, transform .6s ease-out;
+    transform: translateY(-20px);
 }
-.mysection.visible {
+.mysection.visible  {
     opacity: 1;
     transform: none;
-}
+ }
 /* different direction animation */
 
-.leftSide {
+ .leftSide {
     transform: translateX(-30px);
 }
 .rightSide {
     transform: translateX(30px);
 }
-.scaleIn {
-    transform: scale(0.95);
-}
+ 
  /* main section animation end */
 /* about section */
 section {
@@ -233,11 +255,11 @@ h3 {
     gap: 25px;
 }
 .card {
-    background-color: #fff;
+    background-color: var(--cardbg);
     padding: 30px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px var(--minshadow);
     transition: transform .3s ease-in-out;
 }
 .card:hover {
@@ -287,7 +309,7 @@ gap: 1.5rem;
 }
 
 .destinationCard .destContent {
-     position: absolute;
+    position: absolute;
     left: 0;
     bottom: 0;
     z-index: 2;
@@ -302,7 +324,7 @@ gap: 1.5rem;
 }
 .destinationCard.visible {
     opacity: 1;
-     transform: translateY(0);
+    transform: translateY(0);
 }
 .destinationCard.visible .destContent {
     transform: translateY(0);
@@ -324,7 +346,7 @@ gap: 1.5rem;
     content: '';
     inset: 0;
     position: absolute;
-    background: rgba(0,0,0,0.05);
+    background: var(--minshadow);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     z-index: 0;
@@ -401,23 +423,21 @@ form button {
     border-radius: 10px 0 10px 0;
     display: grid;
     place-items: center;
-    color: #e0a106;
+    color: var(--gold-accent);
 }
 .news {
     font-size: .9rem;
     padding: 0 3px;
-    line-height: 1.4;
-}
+ }
 .footForm button {
     padding: 10px 20px;
     border: none;
     cursor:pointer;
     text-align: center;
-    width: fit-content;
-}
+ }
 .footForm input  {
     padding: 10px;
-    border: 1px solid #e0a106;
+    border: 1px dotted var(--gold-accent);
 }
 /* footer */
 footer {
@@ -433,12 +453,12 @@ footer div ul li {
 }
 footer div ul li a {
     text-decoration: none;
-    color: #111;
+    color: var(--text);
     transition: text-decoration .3s ease-in-out, color
     .3s ease-in-out;
 }
 footer div ul li a:hover {
-    color: #e0a106;
+    color: var(--accent);
     text-decoration: underline;
 }
 .footflex {
@@ -470,19 +490,22 @@ footer div ul li a:hover {
 }
 .navLinks li {
     margin-top: unset;
+    top: 0;
     margin-right: 1rem;
+    margin-bottom: unset;
 }
 .navLinks a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+     text-decoration: none;
+     font-weight: 500;
     transition: color .3s ease-in-out;
 }
+ 
+ 
 .footForm {
     display: flex;
     flex-direction: row;
     padding: 0;
-        max-width: 600px;
+    max-width: 600px;
 
 }
 .news {
@@ -498,7 +521,7 @@ footer div ul li a:hover {
 }
 .footForm input  {
     padding: 10px;
-    border: 1px solid #e0a106;
+    border: 1px solid var(--gold-accent);
        min-width: 300px;
 margin: 0;
 }
@@ -509,10 +532,10 @@ margin: 0;
     width: 30px;
     height: 30px;
     position: fixed;
-    background-color: #17375f;
-    color: white;
+    background-color: var(--accent);
+    color: var(--whitetext);
     font-size: 1.2rem;
-    z-index: 1000;
+    z-index: 3;
     cursor: pointer;
     right: 3rem;
     border-radius: 5px;
@@ -523,7 +546,7 @@ margin: 0;
     visibility: hidden;
 }
 .scrollBtn:hover {
-    background-color: #0d1b2a;
+    background-color: var(--accent-hover);
 } 
 .scrollBtn.show {
     opacity: 1;
@@ -532,8 +555,8 @@ margin: 0;
 
 /* focus for unouts and btn elements */
 .scrollBtn:focus, input:focus, textarea:focus, .skiplink {
-outline: 1px solid #e0a106;
-box-shadow:  2px 2px 2px 2px rgba(0,0,0,0.5);
+outline: 1px solid var(--gold-accent);
+box-shadow:  2px 2px 2px 2px var(--minshadow);
 } 
 i {
         font-display: swap;
@@ -543,13 +566,16 @@ img.expImg {
 max-width:100%;
 height: auto;
 display:block;
-box-shadow: 0 3px 4px 4px rgba(0,0,0,0.05);
+box-shadow: 0 3px 4px 4px var(--minshadow);
 border-radius: 6px;
 }
 @media (prefers-reduced-motion: reduce) {
     .mysection, .destinationCard, .destinationCard .destcontent {
-        opacity: 1 !important;
+        opacity: 1 ;
         transform: none !important;
         transition: none !important;
     }
+}
+#newsBtn {
+    color: var(--whitetext);
 }

@@ -3,11 +3,9 @@ const uL = document.querySelector("#navLinks");
 const navMenuBtn = document.querySelector("#navMenuBtn");
 const navLinks = document.querySelectorAll("nav a");
 const destinationCards = document.querySelectorAll(".destinationCard");
- const card = document.querySelectorAll(".card")
 const scrollBtn = document.querySelector("#scrollBtn");
-const mysection = document.querySelectorAll(".mysection");
-console.log(card)
-dynamicToggle();
+const mysections = document.querySelectorAll(".mysection");
+   dynamicToggle();
 
 function closenav() {
     uL.classList.remove("active");
@@ -34,7 +32,7 @@ function dynamicToggle() {
             /* set timeout */
             setTimeout(() => {
                 document.querySelector(targetId).scrollIntoView({
-                    behaviour: 'smooth',
+                    behavior: 'smooth',
                 });
             }, 100);
             }
@@ -58,48 +56,29 @@ window.addEventListener("scroll", () => {
 scrollBtn.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
-        behaviour: 'smooth',
+        behavior: 'smooth',
     });
 });
 
 /* intersection observer to scroll card */
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        const element = entry.target;
-        if (entry.isIntersecting && !element.classList.contains("visible")) {
-            element.style.willChange = "opacity, transform";
-            setTimeout(() => {
-                element.classList.add("visible");
-                observer.unobserve(element);
-            }, index * 100);
-            element.addEventListener("transitionend", () => {
-                element.style.willChange = "auto";
-            }, { once: true });
-        };
-    });
-}, { threshold: 0.15 });
-[...destinationCards, ...mysection, ...card].forEach((element)=>{observer.observe(element)})
+ const observer = new IntersectionObserver((entries) => {
+    
 
-
-
-
-
-
-/* const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach((entry, index) => {
+     entries.forEach((entry, index) => {
+        console.log("Observing:", entry.target.className, entry.isIntersecting); // ✅ debug
         if (entry.isIntersecting) {
-            // stop multiple animation
-            if (!entry.target.classList.contains('visible')) {
-                setTimeout(() => {
-                    entry.target.classList.add("visible");                 entry.target.style.willChange = "opacity, transform";
+             setTimeout(() => {
+                    entry.target.classList.add("visible");
+                    entry.target.style.willChange = "opacity, transform";
+                    observer.unobserve(entry.target);
                 }, index * 150);
-            };
-        } else {
-            entry.target.classList.remove('visible');
-        };
+            entry.target.addEventListener("transitionend", () => {
+                entry.target.style.willChange = "auto";
+            }, {once:true})
+        } 
     });
 }, { threshold: 0.15 }); // show when 20% of card is available
-mysection.forEach(section=>{observer.observe(section)})
-destinationCards.forEach(destCard => { observer.observe(destCard) }); */
+
+[...destinationCards, ...mysections].forEach((el) => { observer.observe(el) });
+ 
