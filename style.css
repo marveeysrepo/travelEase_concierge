@@ -241,9 +241,9 @@ section {
 }
 /* services section style */
 
-#about h2, #services h2, #testimonials h2, #destinations h2,  #experience h2 {
+#about h2, #services h2, #testimonial h2, #destinations h2,  #experience h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 2.3rem;
 } 
 h3 {
@@ -360,18 +360,84 @@ gap: 1.5rem;
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
+}
+.testimonialGrid{
+        place-items: center;
+}
+#title {
+    text-align: center;
+  margin-bottom: 2rem;
 }
 .testimonial {
     background-color: #f7f7f7;
-    padding: 25px;
-    border-radius: 10px;
+    padding:   25px;
+    border-radius: 15px;
     font-style: italic;
+    max-width: max-content;
 }
+.testimonial:hover {
+    border: 1px inset #ccc;
+    box-shadow: 4px, 4px 4px 6px rgba(0,0,0,0.59);
+}
+ .img-container{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+ }
+ .img-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #e3e9ef;
+    border-radius: 50%;
+    top:-0.15rem;
+    left:-0.3rem
+ }
+ #personimg{
+    display: block;
+    object-fit: cover;
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+ }
+ #job {
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 10px;
+ }
 .testimonial h4 {
     text-align: center;
-    margin: 20px auto;
+    margin: 10px auto;
     font-weight: 700;
+}
+#comment{
+    max-width: 400px;
+}
+.buttoncontainer {
+text-align: center;
+}
+#prevbtn, #nextbtn {
+    outline: transparent;
+    border:transparent;
+    background: transparent;
+    font-size: 2.3rem;
+    cursor: pointer;
+    margin: 0 2rem;
+    color: var(--accent)
+}
+#prevbtn:hover, #nextbtn:hover {
+   color: var(--accent-hover)
+}
+  
+.underline {
+    height: 5px;
+    background: #205996;
+    margin: 0 auto 30px auto;
+    width: 5rem;
 }
 /* contact style */
 #contact {

@@ -132,12 +132,24 @@
 </section>
 <!-- client testimony -->
 <section id="testimonials" class="mysection scaleIn">
-    <h2>What Our Clients Say</h2>
+    <div id="title">
+        <h2 class="th2">What Our Clients Say</h2>
+    <div class="underline"></div>
+    </div>
     <div class="testimonialGrid">
-        <div class="testimonial">
-            <p>EasyTravel made Our honeymoon enjoyable. They handled every details with precision.</p>
-            <h4>Emma & Amara</h4>
-        </div>
+        <article class="testimonial">
+            <div class="img-container">
+                <img src="assets/images/medium-shot-female-economist-working-office.jpg" alt="Profile image" id="personimg">
+            </div>
+            <h4 id="personname">Emma & Amara</h4>
+            <p id="job">Interior Designer</p>
+            <p id="comment">EasyTravel made Our honeymoon enjoyable. They handled every details with precision.</p>
+            <div class="buttoncontainer">
+                <button type="button" id="prevbtn" title="previous review" aria-label="previous button"><i class="fas fa-chevron-left"> </i></button>
+                <button type="button" id="nextbtn" aria-label="next button"><i class="fas fa-chevron-right" title="next review"></i></button>
+            </div>
+        </article>
+        <!-- 
         <div class="testimonial">
             <p>
                 They legalized my documents on my behalf, I didn't have to travel to & fro.
@@ -155,7 +167,7 @@
                 Their services is top notch. I highly recommend easyTravel.
             </p>
             <h4>Fatimah Danjumah</h4>
-        </div>
+        </div> -->
     </div>
 </section>
 
@@ -199,7 +211,7 @@
  <!-- add checkbox for user to rate easy travel services -->
 <label for="message">Message : <span aria-hidden="true">*</span></label>
 <textarea name="message" id="message" cols="30" rows="3" placeholder="Send us a message"></textarea>
-<button type="submit" class="btn" id='submitBtn'>Submit</button>
+<button type="submit" class="btn" id='submitBtn'>Send M essage</button>
     </form>
 </section>
 </main>
@@ -213,12 +225,22 @@
     </div>
     <div class="footflex">
     <div class="footerNav">
-        <h3  class="footh3">Get to know us</h3>
+        <h3  class="footh3">Company</h3>
         <ul>
             <li><a href="">Easy Travel</a></li>
-            <li><a href="">Popular Destinations</a></li>
+            <li><a href="">Refer a Customer</a></li>
             <li><a href="">Support</a></li>
             <li><a href="">Bookings</a></li>
+        </ul>
+    </div>
+    <div class="footerNav">
+                <h3  class="footh3">Useful Links</h3>
+
+         <ul>
+            <li><a href="#about">About Us</a> </li>
+            <li><a href="#services">Our Services</a> </li>
+            <li><a href="#destinations">Popular Destination</a> </li>
+            <li><a href="mailto:marveey8027@gmail.com">Contact Us</a> </li>
         </ul>
     </div>
     <div class="socialLinks">
